@@ -4,32 +4,32 @@
     ViewData["Title"] = "Create Todo";
 }
 
-<div class="max-w-2xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-    <div class="bg-white shadow sm:rounded-lg">
-        <div class="px-4 py-5 sm:p-6">
-            <h3 class="text-lg leading-6 font-medium text-gray-900">Create New Todo</h3>
-            <form asp-action="Create" method="post" class="mt-5">
-                <div class="space-y-6">
+<div class="create-container">
+    <div class="create-form-container">
+        <div class="create-form-content">
+            <h3 class="create-form-title">Create New Todo</h3>
+            <form asp-action="Create" method="post" class="create-form">
+                <div class="create-form-group">
                     <div>
-                        <label asp-for="Title" class="block text-sm font-medium text-gray-700">Title</label>
-                        <div class="mt-1">
-                            <input asp-for="Title" type="text" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md cursor-text" autofocus />
+                        <label asp-for="Title" class="create-form-label">Title</label>
+                        <div class="create-form-input-container">
+                            <input asp-for="Title" type="text" class="create-form-input" autofocus />
                         </div>
                     </div>
 
                     <div>
-                        <label asp-for="Description" class="block text-sm font-medium text-gray-700">Description</label>
-                        <div class="mt-1">
-                            <textarea asp-for="Description" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md cursor-text"></textarea>
+                        <label asp-for="Description" class="create-form-label">Description</label>
+                        <div class="create-form-input-container">
+                            <textarea asp-for="Description" rows="3" class="create-form-textarea"></textarea>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-5 flex justify-end space-x-3">
-                    <a asp-action="Index" class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <div class="create-form-actions">
+                    <a asp-action="Index" class="btn-cancel">
                         Cancel
                     </a>
-                    <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <button type="submit" class="btn-create">
                         Create
                     </button>
                 </div>
