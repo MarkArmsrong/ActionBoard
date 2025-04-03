@@ -509,12 +509,6 @@ input[type="text"]:focus, textarea:focus {
     background-color: #F9FAFB;
     border-radius: 0.5rem;
     padding: 1rem;
-    min-height: 200px;
-    transition: background-color 0.2s;
-}
-
-.kanban-column.drag-over {
-    background-color: #E5E7EB;
 }
 
 .kanban-column-title {
@@ -536,13 +530,6 @@ input[type="text"]:focus, textarea:focus {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     padding: 1rem;
     cursor: move;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.kanban-item.dragging {
-    opacity: 0.5;
-    transform: scale(0.95);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .kanban-item-content {

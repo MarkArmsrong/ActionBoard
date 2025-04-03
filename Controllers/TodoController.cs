@@ -93,7 +93,7 @@ namespace ActionBoard.Controllers
         // POST: Todo/UpdateStatus/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateStatus(int id, [FromBody] UpdateStatusRequest request)
+        public async Task<IActionResult> UpdateStatus(int id, string status)
         {
             var todo = await _context.Todos.FindAsync(id);
             if (todo == null)
@@ -112,8 +112,8 @@ namespace ActionBoard.Controllers
                 return Forbid();
             }
 
-            todo.Status = request.Status;
-            todo.IsCompleted = request.Status == "completed";
+            todo.Status = status;
+            todo.IsCompleted = status == "completed";
             await _context.SaveChangesAsync();
             return Ok();
         }
